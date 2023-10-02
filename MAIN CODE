@@ -1,0 +1,53 @@
+name = input("name:")
+lists='''
+tea        10 rs
+coffee     15 rs
+drop       7 rs
+lemon      15  rs
+badham     20 rs
+chocolate  20 rs
+'''
+print(lists)
+items={'tea':10,'drop':7,'coffee':15,'lemon':15,'badham':20,'chocolate':20}
+price=0
+pricelist=[]
+totalprice=0
+ilist=[]
+plist=[]
+qlist=[]
+for i in range(len(items)):
+    intp=int(input("enter 1 for item 2 for exit" ))
+    
+    if intp==2:
+        print("thanks for visiting")
+        break
+    if intp==1:
+        
+        item=input(" enter your item " )
+        quantity=int(input("enter your quantity "))
+        if item in items.keys():
+            price=quantity*(items[item])
+            pricelist.append((item,quantity,price))
+            a=ilist.append(item)
+            c=qlist.append(quantity)
+            b=plist.append(price)
+            totalprice+=price
+            
+            
+        else:
+            
+            print("item is not available")
+    else:
+        print("you entered wrong num ")
+if totalprice!=0:
+    print(30*"=", "TEA POINT","="*30)
+    print("Name:","                   ",name)
+    print("items","       ","quantity","             ","price")
+    print("                                              ")
+    for i in range(len(pricelist)):
+        print(ilist[i],"           ",qlist[i],"                  ",plist[i])
+print("                                                  ")        
+print("                                 ","..........")    
+print("totalprice","                           ",totalprice)
+
+print("                                  ","..........")
